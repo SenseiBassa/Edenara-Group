@@ -1,0 +1,50 @@
+/* ── Global reset & base styles ───────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap');
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #060F1C;
+  color: #F4EFE4;
+}
+
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: #060F1C; }
+::-webkit-scrollbar-thumb { background: rgba(184,146,42,.4); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #B8922A; }
+
+/* ── Animations ───────────────────────────────────────── */
+@keyframes ticker {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+@keyframes orb {
+  0%, 100% { transform: scale(1); opacity: .6; }
+  50%       { transform: scale(1.13); opacity: .9; }
+}
+
+@keyframes orb-left {
+  0%, 100% { transform: scale(1); opacity: .6; }
+  50%       { transform: scale(1.13); opacity: .9; }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: none; }
+}
+
+/* ── Utility classes ──────────────────────────────────── */
+.serif { font-family: 'Cormorant Garamond', Georgia, serif; }
+.sans  { font-family: 'DM Sans', system-ui, sans-serif; }
